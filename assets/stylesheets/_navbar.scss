@@ -1,0 +1,42 @@
+
+
+.navbar-container {
+  display: flex;
+  padding-top: 53px;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.logo {
+  border-radius: 50%;
+  height: 70px;
+}
+
+.navbar-image-logo {
+  display: flex;
+  justify-content: space-around;
+    h1 {
+      margin-left: 50px;
+    }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+    li {
+      list-style: none;
+      margin-left: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: darkgrey;
+      font-size: 20px;
+        &:hover{
+         color: black;
+         cursor: pointer;
+        }
+      }
+}
+
