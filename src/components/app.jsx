@@ -1,13 +1,24 @@
 import React, { Component} from 'react';
+import GoogleMapReact from 'google-map-react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import StarsRating from 'react-stars-rating';
 
-import LeftArrow from './left_arrow.jsx'
-import RightArrow from './right_arrow.jsx'
+import LeftArrow from './left_arrow.jsx';
+import RightArrow from './right_arrow.jsx';
 import pictures from '../../data/pictures';
+import reviews from '../../data/reviews';
 import Header from './header.jsx';
 import Cover from './cover.jsx';
 import PictureList from '../containers/picture_list.jsx';
+import ReviewList from './review_list.jsx';
+import Marker from './marker';
 
-
+library.add(fab, faEnvelope)
+const google_key = process.env.GOOGLE_KEY;
+console.log(process.env.GOOGLE_KEY);
 
 class App extends Component {
   constructor(props) {
@@ -15,13 +26,19 @@ class App extends Component {
     this.state = {
       pictures,
       currentIndex: 0,
-      translateValue: 0
+      translateValue: 0,
+      reviews
      }
     }
 
     goToPrevSlide = () => {
+      if(this.state.currentIndex === 0)
+        return;
+
+      // This will not run if we met the if condition above
       this.setState(prevState => ({
-        currentIndex: prevState.currentIndex - 1
+        currentIndex: prevState.currentIndex - 1,
+        translateValue: prevState.translateValue + this.slideWidth()
       }));
      }
 
@@ -47,6 +64,13 @@ class App extends Component {
        return document.querySelector('.picture').clientWidth
     }
 
+    center() {
+    return {
+      lat: 52.498190,
+      lng: 13.442230
+    };
+  }
+
   render() {
     return (
       <div className="main-container">
@@ -58,8 +82,8 @@ class App extends Component {
           <Cover />
         </div>
 
-        <div id="pictures" >
-           <h1>Pictures</h1>
+        <div id="pictures">
+           <h2 className="title-container">Pictures</h2>
           <div className="slider">
             <div className="slider-wrapper"
                 style={{
@@ -74,6 +98,45 @@ class App extends Component {
           </div>
         </div>
 
+        <div id="reviews">
+          <h2 className="title-container">What our customers says about us:</h2>
+          <div className="reviews">
+            <ReviewList  reviews={this.state.reviews} />
+          </div>
+        </div>
+
+        <div id="contact">
+          <h2>Contact</h2>
+          <div className="contact">
+            <div className="contact-info-hours">
+              <div className="contact-information">
+                <h2>Bärsilien</h2>
+                <p>Falckensteinstraße 35, Berlin</p>
+                <p>Contact Number: 0177 1690204</p>
+              </div>
+
+              <div className="info-hours">
+               <p className="title-info-hours">Open hours:</p>
+               <p>Thurdays - Sundays</p>
+               <p>12:00 - 19:00</p>
+              </div>
+
+              <ul className="icons">
+                  <li><a href="mailto:baersilien@gmail.com"><FontAwesomeIcon icon="envelope" /></a></li>
+                  <li><a href="https://www.facebook.com/Baersilien"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></li>
+                  <li><a href="https://www.instagram.com/baersilien/"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></li>
+              </ul>
+            </div>
+            <div className="map-container">
+              <GoogleMapReact
+              defaultCenter={this.center()}
+              defaultZoom={12}
+              bootstrapURLKeys={{ key:`${google_key}`}}>
+                <Marker lat={52.498190} lng={13.442230} />
+              </GoogleMapReact>
+            </div>
+          </div>
+        </div>
 
 
       </div>

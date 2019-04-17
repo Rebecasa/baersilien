@@ -1,0 +1,82 @@
+#contact {
+  background-color: #103935;
+  h1 {
+    text-align: center;
+  }
+}
+
+.contact {
+  max-width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0px auto;
+  padding: 80px 0;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  padding-left: 0;
+  margin-top: 24px;
+
+  li {
+    list-style: none;
+    min-width: 40px;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  a{
+    color: lightgrey;
+    transition: 0.2s;
+    &:hover{
+      font-size: 22px;
+      color: white;
+    }
+  }
+}
+
+.contact-info-hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-hours {
+  margin-top: 34px;
+
+}
+
+.title-info-hours {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .contact {
+    padding-left: 165px;
+    display: block;
+  }
+
+  .contact-info-hours {
+    flex-direction: unset;
+    justify-content: space-between;
+   }
+
+   .map-container{
+    width: 100%;
+   }
+}
+
+@media only screen and (max-width: 426px) {
+
+  .contact {
+    margin-left: 323px;
+  }
+
+  .contact-info-hours {
+    font-size: 23px;
+  }
+}
