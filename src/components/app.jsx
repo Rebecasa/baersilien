@@ -135,7 +135,8 @@ class App extends Component {
               <GoogleMapReact
               defaultCenter={this.center()}
               defaultZoom={12}
-              bootstrapURLKeys={{ key:`${google_key}`}}>
+              // bootstrapURLKeys={{ key:`${google_key}`}}
+              >
                 <Marker lat={52.498190} lng={13.442230} />
               </GoogleMapReact>
             </div>
