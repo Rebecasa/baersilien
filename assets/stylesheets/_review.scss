@@ -10,6 +10,7 @@
   height: 336px;
   margin: 25px;
   max-width: 824px;
+  overflow-x: scroll;
   overflow-y: hidden;
 }
 
@@ -59,15 +60,26 @@
 
 @media only screen and (max-width: 426px) {
   #reviews {
+    min-height: 0;
+    padding-top: 0;
+    margin: 0;
     h2 {
-      text-align: -webkit-right;
+      text-align: left;
+      margin-left: 273px;
     }
   }
+
+  .reviews{
+    height:600px;
+    margin-left: 244px;
+  }
+
   .card {
     height: 600px;
   }
 
   .card-description {
+    width: 500px;
     p {
       font-size: 30px;
     }

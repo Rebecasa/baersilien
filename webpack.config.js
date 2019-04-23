@@ -3,19 +3,12 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  ...
-  plugins: [
-    new Dotenv()
-  ]
-  ...
-};
-
-module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       template: '!!html-loader!templates/index.html'
     })

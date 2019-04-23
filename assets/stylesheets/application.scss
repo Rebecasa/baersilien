@@ -3,6 +3,7 @@
 @import 'map';
 @import 'contact';
 @import 'review';
+@import 'dropdown';
 
 
 
@@ -18,13 +19,17 @@ body {
 }
 
 .main-container {
-  margin-top: 20px;
+  margin: 0px auto;
+  width: 1800px;
   flex-direction: column;
 }
 
 
 .background_image {
   background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+
   width: -webkit-fill-available;
   height: 89vh;
   margin-top: 2291px;
@@ -37,14 +42,25 @@ body {
   color: rgba(100,100,100, 0.9)
 }
 
+.logo :hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width:768px) {
+    .pic-rev {
+      margin: 0px auto;
+      width: 790px;
+    }
+
     .background_image{
-      height: 85vh;
-      margin-top: 2406px;
+      height: 71vh;
+      margin-top: 2070px;
   }
 }
 @media only screen and (max-width:426px) {
+
    .background_image{
-    margin-left: 210px;
+    background-position: -36px;
+    margin-top: 1883px;
   }
 }

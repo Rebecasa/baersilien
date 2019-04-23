@@ -73,25 +73,33 @@
 
 
   .slider{
-    width: 800px;
-    height: 800px;
-    margin-left: 300px;
+    width: 700px;
+    height: 700px;
+    margin-left: 46px;
   }
 }
 
 @media only screen and (max-width: 426px) {
+  .pictures{
+    margin: 0px auto;
+    width: 454px;
+  }
+
   .slider {
-    margin-left: 395px;
+    width: 600px;
+    height: 600px;
+    margin-left: 184px;
   }
 }
+
 @media only screen and (max-width: 376px) {
   .slider {
-    margin-left: 405px;
+    margin-left: 195px;
   }
 }
 
 @media only screen and (max-width: 321px) {
   .slider {
-    margin-left: 426px;
+    margin-left: 214px;
   }
 }
