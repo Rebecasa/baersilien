@@ -54,6 +54,6 @@
     "lint": "eslint './src/**/*.js*'",
     "deploy": "webpack -p && gh-pages -d dist",
     "build:staging": "env-cmd .env.staging yarn run build",
-     "build": "webpack --config webpack.dev.js"
+     "build":  "babel src -d lib"
   }
 }
