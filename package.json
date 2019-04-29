@@ -1,4 +1,5 @@
-{ "homepage": "https://baersilien.com",
+{
+  "homepage": "https://baersilien.com",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -53,7 +54,6 @@
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
     "deploy": "webpack -p && gh-pages -d dist",
-    "build:staging": "env-cmd .env.staging yarn run build",
-     "build":  "babel src -d lib"
+    "build": "babel src -d lib"
   }
 }
