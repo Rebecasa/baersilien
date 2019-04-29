@@ -17,8 +17,7 @@ import ReviewList from './review_list.jsx';
 import Marker from './marker';
 
 library.add(fab, faEnvelope)
-const google_key = process.env.REACT_APP_GOOGLE_KEY;
-console.log(process.env.REACT_APP_GOOGLE_KEY);
+
 
 class App extends Component {
   constructor(props) {
@@ -135,7 +134,7 @@ class App extends Component {
               <GoogleMapReact
               defaultCenter={this.center()}
               defaultZoom={12}
-              // bootstrapURLKeys={{ key:`${google_key}`}}
+              // bootstrapURLKeys={{ key:`${GOOGLE_KEY}`}}
               >
                 <Marker lat={52.498190} lng={13.442230} />
               </GoogleMapReact>
