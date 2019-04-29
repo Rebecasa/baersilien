@@ -1,4 +1,4 @@
-{ "homepage": "baersilien.com",
+{ "homepage": "github.com/Rebecasa/baersilien",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
