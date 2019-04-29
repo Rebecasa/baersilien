@@ -33,10 +33,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ],
-    options: {
-      start_url: '/',
-    }
+    extensions: [ '.js', '.jsx' ]
   }
 };
 
