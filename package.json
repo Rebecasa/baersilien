@@ -53,6 +53,7 @@
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
     "deploy": "webpack -p && gh-pages -d dist",
-    "build:staging": "env-cmd .env.staging yarn run build"
+    "build:staging": "env-cmd .env.staging yarn run build",
+     "build": "webpack --config webpack.dev.js"
   }
 }
