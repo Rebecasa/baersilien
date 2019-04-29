@@ -1,4 +1,4 @@
-{
+{ "homepage": ".",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -49,6 +49,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
+    "deploy": "webpack -p && gh-pages -d dist",
+    "build:staging": "env-cmd .env.staging yarn run build"
   }
 }

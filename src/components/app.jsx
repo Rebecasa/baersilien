@@ -17,8 +17,8 @@ import ReviewList from './review_list.jsx';
 import Marker from './marker';
 
 library.add(fab, faEnvelope)
-const google_key = process.env.GOOGLE_KEY;
-console.log(process.env.GOOGLE_KEY);
+const google_key = process.env.REACT_APP_GOOGLE_KEY;
+console.log(process.env.REACT_APP_GOOGLE_KEY);
 
 class App extends Component {
   constructor(props) {
