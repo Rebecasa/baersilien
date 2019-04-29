@@ -1,4 +1,4 @@
-{ "homepage": "https://baersilien.com/",
+{ "homepage": "baersilien.com",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
