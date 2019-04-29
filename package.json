@@ -46,6 +46,10 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rebecasa/baersilien"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
